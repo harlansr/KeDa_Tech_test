@@ -32,7 +32,7 @@ Route::group(['middleware' => 'guest'], function(){
 
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/',[PagesController::class, 'home'])->name('home');
-    Route::get('/home',[PagesController::class, 'home'])->name('home');
+    Route::get('/home',[PagesController::class, 'home']);
     Route::get('/customer',[PagesController::class, 'customer'])->name('customer');
     Route::post('/customer',[PagesController::class, 'customerPost']);
     Route::get('/staff',[PagesController::class, 'staff'])->name('staff');
